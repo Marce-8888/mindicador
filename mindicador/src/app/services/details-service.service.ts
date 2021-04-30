@@ -10,10 +10,10 @@ export class DetailsServiceService {
   constructor( private http: HttpClient ) {
     console.log('2 servicio funcionando')
   }
-  getDetails():Observable<any>{
+  getDetails(id):Observable<any>{
     let header = new HttpHeaders()
     .set('Type-content', 'aplication/Json')
-    return this.http.get<any>('/api', {
+    return this.http.get<any>(`/api/${id}`, {
       headers: header
     });
     }

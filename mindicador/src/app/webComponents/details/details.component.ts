@@ -10,12 +10,12 @@ import { ObjToArrayPipe } from '../../obj-to-array.pipe';
 })
 export class DetailsComponent implements OnInit {
 
-  indicators:Array<any>
+  uniques:Array<any>
 
   constructor( private detailsService: DetailsServiceService ) {
-    this.detailsService.getDetails().subscribe( (res:any) => {
+    this.detailsService.getDetails(id).subscribe( (res:any) => {
       console.log('Res', res);
-      this.indicators = res
+      this.uniques = res
     })
    }
 

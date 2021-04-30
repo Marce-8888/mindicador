@@ -10,11 +10,11 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let indicator of indicators | ObjToArray">
+        <tr *ngFor="let unique of uniques | ObjToArray">
 
             <td>
-                <a class="text-decoration-none " href="#">{{indicator.fecha}}</a>
+                <a class="text-decoration-none " href="#">{{unique.series}}</a>
             </td>
-            <td>{{indicator.valor}}</td>
+            <td></td>
         </tr>
 </tbody>
