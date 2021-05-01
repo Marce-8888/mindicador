@@ -10,11 +10,13 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let unique of uniques | ObjToArray">
+        <tr *ngFor="let d of series | ObjToArray">
 
             <td>
-                <a class="text-decoration-none " href="#">{{unique.series}}</a>
+               <a class="text-decoration-none " href="#">{{d.fecha}}</a>
             </td>
-            <td></td>
+            <td>
+                <a class="text-decoration-none " href="#">{{d.valor}}</a>
+            </td>
         </tr>
 </tbody>

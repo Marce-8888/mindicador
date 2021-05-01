@@ -12,9 +12,9 @@ import { from } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { ObjToArrayPipe } from './obj-to-array.pipe';
 import { NavBarComponent } from './webComponents/nav-bar/nav-bar.component';
-
-
-
+import { GraphicComponent } from './webComponents/graphic/graphic.component';
+import { NgxEchartsModule } from 'ngx-echarts';
+import * as echarts from 'echarts';
 
 @NgModule({
   declarations: [
@@ -22,13 +22,20 @@ import { NavBarComponent } from './webComponents/nav-bar/nav-bar.component';
     HomeComponent,
     DetailsComponent,
     ObjToArrayPipe,
-    NavBarComponent
+    NavBarComponent,
+    GraphicComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts') 
+    }),
+    NgxEchartsModule.forRoot({ 
+      echarts , 
+    } )
   ],
   providers: [],
   bootstrap: [AppComponent]
