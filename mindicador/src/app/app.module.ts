@@ -32,10 +32,7 @@ import * as echarts from 'echarts';
     FormsModule,
     NgxEchartsModule.forRoot({
       echarts: () => import('echarts') 
-    }),
-    NgxEchartsModule.forRoot({ 
-      echarts , 
-    } )
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

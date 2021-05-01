@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GraphicService } from 'src/app/services/graphic.service';
-import { EChartOption } from 'echarts';
+//import { EChartOption } from 'echarts';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
